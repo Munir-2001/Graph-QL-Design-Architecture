@@ -1,0 +1,14 @@
+{
+  "name": "graphql-docker-lab",
+  "version": "1.0.0",
+  "description": "GraphQL lab server with Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0",
+    "node-fetch": "^2.6.12"
+  }
+}
