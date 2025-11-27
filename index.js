@@ -32,7 +32,7 @@ const generateId = () => Math.random().toString(36).substr(2, 9);
 async function seedData() {
   console.log('Fetching initial data from Open Library...');
   try {
-    const res = await fetch('https://openlibrary.org/search.json?author=tolkien&limit=25');
+    const res = await fetch('https://openlibrary.org/search.json?author=tolkien&limit=5');
     const data = await res.json();
 
     // Map to our book structure
