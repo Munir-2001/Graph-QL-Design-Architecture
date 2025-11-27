@@ -44,6 +44,13 @@ async function seedData() {
     }));
 
     console.log(`Seeded ${books.length} books.`);
+    // Print full seeded books for debugging / verification
+    try {
+      console.log('Seeded books (JSON):', JSON.stringify(books, null, 2));
+      console.table(books);
+    } catch (e) {
+      console.error('Failed to print seeded books:', e);
+    }
   } catch (error) {
     console.error('Failed to fetch initial data:', error);
   }
