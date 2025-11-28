@@ -90,7 +90,7 @@ async function startServer() {
   await seedData();
 
   const server = new ApolloServer({ typeDefs, resolvers });
-
+  //if the port is in use, change it to 4001
   server.listen({ port: 4000 }).then(({ url }) => {
     console.log(`Your Server ready at ${url}`);
   });

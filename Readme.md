@@ -343,7 +343,7 @@ query {
 **Postman JSON Body (replace BOOK_ID with actual ID):**
 ```json
 {
-  "query": "query { book(id: \"abc123def\") { id title author publishedYear } }"
+  "query": "query { book(id: \"_addidhere_\") { id title author publishedYear } }"
 }
 ```
 
