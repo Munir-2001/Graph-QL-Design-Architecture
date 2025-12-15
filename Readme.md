@@ -182,7 +182,7 @@ Follow these steps to set up your GraphQL development environment:
 ### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/Munir-2001/Graph-QL-Design-Architecture.git
-cd graphql-docker-lab
+cd Graph-QL-Design-Architecture
 ```
 
 ### Step 2: Verify Docker Installation
