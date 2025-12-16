@@ -23,7 +23,39 @@ const typeDefs = gql`
 `;
 
 // In-memory data store
-let books = [];
+// In-memory data store (pre-populated)
+let books = [
+  {
+    id: "1",
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    publishedYear: 1937,
+  },
+  {
+    id: "2",
+    title: "1984",
+    author: "George Orwell",
+    publishedYear: 1949,
+  },
+  {
+    id: "3",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    publishedYear: 1960,
+  },
+  {
+    id: "4",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    publishedYear: 1925,
+  },
+  {
+    id: "5",
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    publishedYear: 1813,
+  },
+];
 
 // Helper to generate unique IDs
 const generateId = () => Math.random().toString(36).substr(2, 9);
@@ -32,16 +64,8 @@ const generateId = () => Math.random().toString(36).substr(2, 9);
 async function seedData() {
   console.log('Fetching initial data from Open Library...');
   try {
-    const res = await fetch('https://openlibrary.org/search.json?author=tolkien&limit=5');
-    const data = await res.json();
-
-    // Map to our book structure
-    books = data.docs.map(doc => ({
-      id: generateId(),
-      title: doc.title,
-      author: doc.author_name ? doc.author_name[0] : "Unknown",
-      publishedYear: doc.first_publish_year || null,
-    }));
+    // // const res = await fetch('https://openlibrary.org/search.json?author=tolkien&limit=5');
+    // const data = await res.json();
 
     console.log(`Seeded ${books.length} books.`);
     // Print full seeded books for debugging / verification
