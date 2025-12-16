@@ -23,7 +23,39 @@ const typeDefs = gql`
 `;
 
 // In-memory data store
-let books = [];
+// In-memory data store (pre-populated)
+let books = [
+  {
+    id: "1",
+    title: "The Hobbit",
+    author: "J.R.R. Tolkien",
+    publishedYear: 1937,
+  },
+  {
+    id: "2",
+    title: "1984",
+    author: "George Orwell",
+    publishedYear: 1949,
+  },
+  {
+    id: "3",
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    publishedYear: 1960,
+  },
+  {
+    id: "4",
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    publishedYear: 1925,
+  },
+  {
+    id: "5",
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    publishedYear: 1813,
+  },
+];
 
 // In case of internet connection issues
 const back_up = [
